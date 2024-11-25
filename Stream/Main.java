@@ -35,7 +35,7 @@ public class Main {
 
     // Ex - "n" random numbers list
     int n = 10;
-    List<Integer> randomNums = Stream.generate(() -> (int)(Math.random() * 100)).limit(n).collect(Collectors.toList()); 
+    List<Integer> randomNums = Stream.generate(() -> (int)(Math.random() * 33)).distinct().limit(n).sorted().collect(Collectors.toList()); 
     System.out.println(randomNums);
 
     // using peek and terminal function (min, max, count)
